@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border:2px solid black;
+            width:600px;
+            padding:30px;
+            margin-left: 350px;
+            margin-top: 150px;
+        }
+        button{
+            height:100px;
+            width:100px;
+        }
+        #btn{
+            height: 40px;
+            width:450px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <input type="text" id="btn" placeholder="enter">
+    <br><br><br>
+    <button style="background-color: red;" onclick="myfun()"> red</button>
+    <button style="background-color: blue;" onclick="myfun1()"> blue</button>
+    <button style="background-color: yellow;" onclick="myfun2()"> yellow</button>
+    <button style="background-color: green;" onclick="myfun3()"> green</button>
+    <button style="background-color:aqua;" onclick="myfun4()"> aqua</button>
+    <br><br>
+    <button onclick="font()"> Script MT</button>
+    <button onclick="font1()">Lucida Calligraphy</button>
+    <button onclick="font2()"> Mistral</button>
+    <button onclick="font3()"> Segoe Print</button>
+    <button onclick="font4()"> Viner Hand ITC</button>
+    <script>
+        function myfun(){
+            document.getElementById("btn").style.color="red";
+        }
+        function myfun1(){
+            document.getElementById("btn").style.color="blue";
+        }
+        function myfun2(){
+            document.getElementById("btn").style.color="yellow";
+        }
+        function myfun3(){
+            document.getElementById("btn").style.color="green";
+        }
+        function myfun4(){
+            document.getElementById("btn").style.color="aqua";
+        }
+        function font(){
+            document.getElementById("btn").style.fontFamily="Script MT";
+        }
+        function font1(){
+            document.getElementById("btn").style.fontFamily="Lucida Calligraphy";
+        }
+        function font2(){
+            document.getElementById("btn").style.fontFamily="Mistral";
+        }
+        function font3(){
+            document.getElementById("btn").style.fontFamily="Segoe Print";
+        }
+        function font4(){
+            document.getElementById("btn").style.fontFamily=" Viner Hand ITC";
+        }
+    </script>
+    </div>
+</body>
+</html>
