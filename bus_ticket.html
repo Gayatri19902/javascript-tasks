@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+     body{
+       background-image: url("https://image.freepik.com/free-vector/live-experience-travel-landing-page_23-2148303581.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+     }
+     .BT{
+        margin-left: 550px;
+        margin-top:20px;
+        width:500px;
+        padding:10px;
+        font-size:25px;
+        background-color: rgba(85, 78, 78, 0.5);
+        font-weight: 1000;
+     }
+     .btn{
+        background: green;
+        border:none;
+        padding:10px;
+        margin-left:180px;
+        border-radius:150px;
+        width:100px;
+     }
+    </style>
+</head>
+<body>
+    <div class="BT">
+    <h1 style="font-style:italic" align="center"> Bus Ticket Reservation </h1>
+    <table>
+    <tr>
+       <td><label> Name </label></td>
+       <td><input type="text" id="bus"></td>
+    </tr>
+    <tr>
+        <td><label> From </label></td>
+        <td><input type="text" id="bus1"></td>
+    </tr>
+    <tr>
+        <td><label> Destination </label></td>
+        <td><select id="Ticket">
+            <option value="0">select your option</option>
+            <option value="500">Tirupathi</option>
+            <option value="600">Visakhapatnam</option>
+            <option value="900">Srisailam</option>
+            <option value="1000">Puri</option>
+            <option value="400">Chennai</option>
+        </select></td>
+    </tr>
+    <tr>
+       <td> <label> Number Of Tickets </label></td>
+       <td> <input type="number" id="bus3"> </td>
+    </tr>
+    <tr>
+        <td> <label> Statement </label></td>
+        <td> <label id= "Statement"></label></td>
+    
+     </tr>
+    <tr> 
+        <td> <button onclick="Reservation()" class="btn"> Submit </button> </td>
+    </tr>
+    </table>
+    </div>
+    <script>
+        function Reservation(){
+        var Name=document.getElementById("bus").value;
+        var From=document.getElementById("bus1").value;
+        var Destination=document.getElementById("Ticket").value;
+        var NumberOfTickets =document.getElementById("bus3").value;
+        var Amount=parseInt((Destination*5*NumberOfTickets));
+        var gst=parseInt((Amount*18)/100);
+        var totalamount=parseInt(gst+Amount);
+        document.getElementById("Statement").innerHTML="Total amount is"+totalamount;
+
+    }
+    </script>
+
+
+</body>
+</html>
