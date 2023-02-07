@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+    <style>
+        .FD
+        {
+            border: 2px solid black;
+            width:350px;
+            margin-left:450px;
+            margin-top:120px;
+            padding:10px;
+            line-height:30px ;
+            
+        }
+        .btn
+        {
+            background-color:green;
+            border:none;
+        }
+        .btn1
+        {
+            background-color:red;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="FD">
+        <table>
+    <h1 align="center"> FD Calculator</h1>
+    <tr>
+        <td><label>Name </label></td>
+        <td><input type="text" id="Name"></td>
+    </tr>
+   <tr>
+    <td><label> Amount </label></td>
+    <td><input type="number"id="Amount"></td>
+   </tr>
+   <tr>
+    <td><label> Term </label></td>
+    <td><select id="term">
+        <option value="0">select your option</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select></td>
+   </tr>
+   <tr>
+    <td><label> Year Of Birth </label></td>
+    <td><input type="text" id="Year"></td> 
+   </tr>
+   <tr>
+    <td><button onclick="checkfd()" class="btn"> Submit </button></td>
+    <td><button class="btn1"> Clear </button></td>
+   </tr>
+    <tr> 
+        <td> <label> Statement: </label></td>
+        <td> <label id="res"></label></td>
+    </tr>
+    </table>
+    </div>
+    <script>
+        function checkfd(){
+
+            var Name=document.getElementById("Name").value;
+            var Amount=parseInt(document.getElementById("Amount").value);
+            var Term=document.getElementById("term").value;
+            var YearOfBirth=document.getElementById("Year").value;
+            var age=2023-YearOfBirth; var rate;
+            if(age<40)
+            {
+              rate=5
+            }
+            else if(age<60)
+            {
+                rate=6
+            }
+            else{
+                rate=8
+            }
+            var intrest=parseInt((Amount*Term*rate)/100);
+            var totalamount=parseInt(Amount+intrest);
+            document.getElementById("res").innerHTML="your intrest is"+totalamount;
+        }
+    </script>
+</body>
+</html>
